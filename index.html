@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VERSEVE: AI Learning Transformer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0F172A',
+                        'brand-light': '#FFFFFF',
+                        'brand-accent-cyan': '#22D3EE',
+                        'brand-accent-violet': '#A78BFA',
+                        'brand-accent-fuchsia': '#F472B6',
+                        'brand-secondary-dark': '#1E293B',
+                        'brand-secondary-light': '#F1F5F9',
+                        'brand-text-dark': '#E2E8F0',
+                        'brand-text-light': '#334155',
+                        'brand-subtle-dark': '#475569',
+                        'brand-subtle-light': '#E2E8F0',
+                        // Legacy colors for compatibility, pointing to new ones
+                        'brand-accent-teal': '#22D3EE',
+                        'brand-accent-purple': '#A78BFA',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'slide-up': 'slideUp 0.5s ease-out forwards',
+                        'pulse-glow': 'pulseGlow 2s infinite ease-in-out',
+                        'pop': 'pop 0.3s ease-out',
+                        'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: 0, transform: 'translateY(10px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(167, 139, 250, 0.5)' },
+                            '50%': { boxShadow: '0 0 0 10px rgba(167, 139, 250, 0)' },
+                        },
+                        pop: {
+                            '0%': { transform: 'scale(0.9)' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                        shake: {
+                           '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                           '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                           '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                           '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+<body class="bg-brand-secondary-light dark:bg-brand-dark transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

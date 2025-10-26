@@ -1,0 +1,7 @@
+{
+  "name": "VERSEVE: AI Learning Transformer",
+  "description": "An AI-powered learning platform that transforms any input (text, URL, media) into explainable flowcharts, videos, and podcasts. It includes interactive quizzes, personalized learning paths, and an AI assistant to make learning engaging and effective.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
